@@ -54,7 +54,7 @@ export function Modal({
       aria-modal="true"
       aria-labelledby={title ? 'modal-title' : undefined}
       aria-describedby={description ? 'modal-description' : undefined}
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      className="fixed inset-0 z-50 overflow-y-auto p-3 sm:p-6"
     >
       {/* Opaque Noir Backdrop */}
       <div
@@ -63,40 +63,49 @@ export function Modal({
         aria-hidden="true"
       />
 
-      {/* Modal Dialog Content - 8px radius, 1px border #414045, surface #111014 */}
-      <div
-        className={cn(
-          'relative w-full rounded-lg bg-[#111014] border border-[#414045] p-6 sm:p-8 z-10 shadow-[0_8px_24px_rgba(0,0,0,0.6)] ring-1 ring-inset ring-[#ffc526]/10',
-          maxWidths[maxWidth]
-        )}
-      >
-        {/* Close Button */}
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close dialog"
-          className="absolute right-4 top-4 p-2 text-[#b3b2b2] hover:bg-[#1c1b20] hover:text-[#ffc526] rounded transition-colors focus:outline-none border border-transparent hover:border-[#414045]"
+      {/* Centering wrapper */}
+      <div className="flex min-h-full items-center justify-center relative z-10 pointer-events-none">
+        {/* Modal Dialog Content - 8px radius, 1px border #414045, surface #111014 */}
+        <div
+          className={cn(
+            'pointer-events-auto relative w-full rounded-lg bg-[#111014] border border-[#414045] p-5 sm:p-7 shadow-[0_8px_24px_rgba(0,0,0,0.6)] ring-1 ring-inset ring-[#ffc526]/10 max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-3.5rem)] flex flex-col',
+            maxWidths[maxWidth]
+          )}
         >
-          <X className="w-5 h-5" />
-        </button>
+          {/* Modal Header */}
+          <div className="flex items-start justify-between gap-4 pb-4 border-b border-[#222126] shrink-0">
+            <div className="pr-2">
+              {title ? (
+                <h3
+                  id="modal-title"
+                  className="text-lg sm:text-2xl font-heading uppercase text-[#f3f4f2] tracking-[-0.02em] leading-tight"
+                >
+                  {title}
+                </h3>
+              ) : null}
+              {description ? (
+                <p id="modal-description" className="mt-1 text-xs sm:text-sm text-[#b3b2b2] font-body leading-relaxed">
+                  {description}
+                </p>
+              ) : null}
+            </div>
 
-        {title ? (
-          <div className="mb-6 pr-8">
-            <h3
-              id="modal-title"
-              className="text-xl sm:text-2xl font-heading uppercase text-[#f3f4f2] tracking-[-0.02em]"
+            {/* Close Button */}
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close dialog"
+              className="p-1.5 sm:p-2 text-[#b3b2b2] hover:bg-[#1c1b20] hover:text-[#ffc526] rounded transition-colors focus:outline-none border border-transparent hover:border-[#414045] shrink-0 -mr-1 cursor-pointer"
             >
-              {title}
-            </h3>
-            {description ? (
-              <p id="modal-description" className="mt-1 text-sm text-[#b3b2b2] font-body leading-relaxed">
-                {description}
-              </p>
-            ) : null}
+              <X className="w-5 h-5" />
+            </button>
           </div>
-        ) : null}
 
-        <div className="mt-2">{children}</div>
+          {/* Modal Body with internal smooth scrolling */}
+          <div className="mt-4 overflow-y-auto pr-1 sm:pr-2 flex-1">
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   );
