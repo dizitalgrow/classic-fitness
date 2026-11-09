@@ -1,0 +1,148 @@
+import { Programme } from '@/types/business';
+
+export const programmesData: Programme[] = [
+  {
+    id: 'strength',
+    title: 'Strength Training',
+    slug: 'strength-training',
+    tagline: 'Build real, foundational power and barbell mastery',
+    description:
+      'Structured progressive overload training focusing on compound lifts, core stability, and functional physical power for lifters of all levels.',
+    fullDescription: [
+      'Our strength training programme focuses on heavy compound movements including squats, deadlifts, bench presses, and overhead presses.',
+      'Under coach supervision, you learn proper biomechanics, bar path discipline, bracing techniques, and systematic progressive overload to build dense, functional muscle without injury.',
+    ],
+    benefits: [
+      'Increase bone density & joint resilience',
+      'Boost resting metabolic rate',
+      'Master proper lifting technique safely',
+      'Systematic strength tracking and progression',
+    ],
+    targetAudience: 'Individuals wanting raw strength, power, and lean muscle mass.',
+    intensity: 'Moderate',
+    scheduleNote: 'Available throughout morning & evening batches.',
+    image: 'https://images.unsplash.com/photo-1534367507873-d2d7e24c797f?q=80&w=1200&auto=format&fit=crop',
+    badge: 'Core Specialty',
+    isConfirmed: true,
+  },
+  {
+    id: 'personal-training',
+    title: 'Personal Training (1-on-1)',
+    slug: 'personal-training',
+    tagline: 'Dedicated 1-on-1 coaching tailored directly to your physiology',
+    description:
+      'Work side-by-side with experienced coaches who calibrate every set, rep, rest interval, and nutritional guideline to your specific goals.',
+    fullDescription: [
+      'Get undivided attention from experienced coaches in HSR Layout. Every session is planned around your posture, prior injuries, and exact targets.',
+      'Coaches provide continuous form correction, accountability, and customized workout splits to accelerate your progress safely.',
+    ],
+    benefits: [
+      'Dedicated coaching by experienced trainers',
+      'Customized weekly workout splits',
+      'Form analysis and injury prevention',
+      'Ongoing accountability and progress monitoring',
+    ],
+    targetAudience: 'Lifters looking for maximum accountability and tailored guidance.',
+    intensity: 'All Fitness Levels',
+    scheduleNote: 'Flexible slots booked with assigned coach.',
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1200&auto=format&fit=crop',
+    badge: 'High Accountability',
+    isConfirmed: true,
+  },
+  {
+    id: 'transformation',
+    title: 'Body Transformation',
+    slug: 'body-transformation',
+    tagline: 'A comprehensive, 12-week body recomposition protocol',
+    description:
+      'Combines resistance training, conditioning, and tailored dietary planning to shed stubborn body fat while preserving lean muscle tissue.',
+    fullDescription: [
+      'A holistic, results-focused transformation protocol engineered for sustainable fat loss and muscle toning.',
+      'Includes bi-weekly measurements, nutrition adjustments, and tailored gym workouts designed to build healthy long-term fitness habits.',
+    ],
+    benefits: [
+      'Visible body recomposition and fat reduction',
+      'Tailored calorie and macronutrient breakdown',
+      'Fortnightly body measurement check-ins',
+      'Sustainable habit formation for life',
+    ],
+    targetAudience: 'Members aiming for noticeable fat loss and athletic muscle tone.',
+    intensity: 'High Intensity',
+    scheduleNote: 'Requires commitment to 4-5 sessions per week.',
+    image: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=1200&auto=format&fit=crop',
+    badge: 'Popular Result',
+    isConfirmed: true,
+  },
+  {
+    id: 'weight-loss',
+    title: 'Weight Loss & Conditioning',
+    slug: 'weight-loss-conditioning',
+    tagline: 'High-energy cardiovascular & circuit training',
+    description:
+      'High-calorie burn functional sessions that elevate heart rate, improve stamina, and torch calories without monotonous cardio routines.',
+    fullDescription: [
+      'Dynamic workouts integrating bodyweight drills, kettlebells, dumbbells, and interval cardio circuits.',
+      'Designed to elevate work capacity, metabolic conditioning, and cardiovascular heart health.',
+    ],
+    benefits: [
+      'High caloric expenditure per session',
+      'Enhanced endurance and cardiovascular stamina',
+      'Dynamic, engaging full-body circuits',
+      'Scalable intensity for beginners',
+    ],
+    targetAudience: 'Men and women looking to shed weight, improve stamina, and stay energized.',
+    intensity: 'Moderate',
+    scheduleNote: 'Daily morning & evening batches.',
+    image: 'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?q=80&w=1200&auto=format&fit=crop',
+    badge: 'Fat Burn',
+    isConfirmed: true,
+  },
+  {
+    id: 'muscle-building',
+    title: 'Muscle Building & Hypertrophy',
+    slug: 'muscle-building',
+    tagline: 'Targeted hypertrophy programming for muscular density',
+    description:
+      'Volume-based resistance routines aimed at muscle hypertrophy, symmetry, and aesthetic development using free weights and isolation machines.',
+    fullDescription: [
+      'Targeted push-pull-legs and upper-lower splits utilizing dumbbells, barbells, and plate-loaded resistance machines.',
+      'Focus on time-under-tension, muscular mind-muscle connection, and recovery optimization.',
+    ],
+    benefits: [
+      'Increased muscle volume and definition',
+      'Targeted muscle group symmetry',
+      'Optimised recovery and split schedules',
+      'Comprehensive machine and free weight variety',
+    ],
+    targetAudience: 'Fitness enthusiasts aiming to pack on solid lean muscle mass.',
+    intensity: 'High Intensity',
+    scheduleNote: 'Open gym access throughout operational hours.',
+    image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=1200&auto=format&fit=crop',
+    badge: 'Hypertrophy',
+    isConfirmed: true,
+  },
+  {
+    id: 'nutrition',
+    title: 'Nutrition & Diet Guidance',
+    slug: 'nutrition-guidance',
+    tagline: 'Practical, realistic nutritional advice to fuel your training',
+    description:
+      'Evidence-based dietary advice customized for Indian and international diets, matching your daily caloric output and fitness objectives.',
+    fullDescription: [
+      'No starvation diets or extreme restrictions. We provide realistic guidelines incorporating traditional meals and proper protein intake.',
+      'Designed to fit your work routine, whether working in Bengaluru tech corridors or managing home schedules.',
+    ],
+    benefits: [
+      'Practical macro-nutrient recommendations',
+      'Healthy meal suggestions using local grocery options',
+      'Pre- and post-workout fuel guidance',
+      'Support for vegetarian, vegan, and non-veg diets',
+    ],
+    targetAudience: 'Any member who wants their diet to match their hard work in the gym.',
+    intensity: 'Beginner Friendly',
+    scheduleNote: 'Included with transformation and personal coaching programs.',
+    image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1200&auto=format&fit=crop',
+    badge: 'Diet Support',
+    isConfirmed: true,
+  },
+];

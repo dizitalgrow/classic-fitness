@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* EightbornV Archival Noir Palette */
+  --color-primary: #ffc526;
+  --color-primary-container: #ffd76a;
+  --color-on-primary: #0e0e11;
+  --color-on-primary-container: #161519;
+
+  --color-accent: #ffc526;
+  --color-accent-hover: #ffd76a;
+
+  --color-secondary: #16d5b2;
+  --color-secondary-container: #19b394;
+  --color-on-secondary: #0e0e11;
+
+  --color-tertiary: #e50a3e;
+  --color-tertiary-container: #920728;
+
+  /* Surfaces & Canvas */
+  --color-background: #0e0e11;
+  --color-surface-dim: #08080b;
+  --color-surface-lowest: #050507;
+  --color-surface: #111014;
+  --color-surface-raised: #16161a;
+  --color-surface-high: #1c1b20;
+  --color-surface-highest: #2d2c33;
+  --color-surface-variant: #222126;
+
+  /* Content & Typography */
+  --color-text-primary: #f3f4f2;
+  --color-text-secondary: #b3b2b2;
+  --color-text-tertiary: #8e8e8e;
+
+  /* Borders & Outlines */
+  --color-border: #414045;
+  --color-border-subtle: #222126;
+  --color-border-medium: #414045;
+  --color-border-strong: #8e8e8e;
+  --color-border-amber: rgba(255, 197, 38, 0.35);
+
+  /* Semantic Feedback */
+  --color-error: #ff425f;
+  --color-success: #16d5b2;
+  --color-warning: #ffc526;
+  --color-whatsapp: #25D366;
+
+  /* Tactical Geometry */
+  --radius-button: 4px;
+  --radius-input: 4px;
+  --radius-card: 8px;
+  --radius-badge: 9999px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #0e0e11;
+    color: #f3f4f2;
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #0e0e11;
+    color: #f3f4f2;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-archivo-black), Impact, "Arial Black", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: #f3f4f2;
+  }
+
+  ::selection {
+    background-color: #ffc526;
+    color: #0e0e11;
+  }
+
+  /* Archival noir scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e0e11;
+    border-left: 1px solid #222126;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2d2c33;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffc526;
+  }
+}
